@@ -1,14 +1,14 @@
-<div style="border-color:{{quickSearchData.customStyle.borderColor}}  !important; background-color:{{quickSearchData.customStyle.backgroundColor}}; color:{{quickSearchData.customStyle.foreColor}};border-size:5px; border-style:solid;">
+<div style="border-color:{{quickSearchData.customStyle.borderColor}}  !important; background-color:{{quickSearchData.customStyle.backgroundColor}}; color:{{quickSearchData.customStyle.foreColor}};border-size:5px; border-style:solid;" class="widget shadow border-radius widget-border">
 	<div class="title">
-		<span ng-bind-html="quickSearchData.title">Quick Search</span>
+		<div style="color:{{quickSearchData.customStyle.foreColor}};" class="capstone">{{quickSearchData.title}}</div>
 	</div>
 	<div class="content">
 		<span class="twitter-typeahead">
 		<input type="text" placeholder="Search" name="widget-search" class="form-control widget-autocomplete tt-input" id="widget-search" autocomplete="off" spellcheck="false" style="position: relative; vertical-align: top;" dir="auto">
 		</span>
 	
-		<div ng-bind-html="quickSearchData.description">
-			<p>   Search the grants database for Grants, Grantees, and Contacts. Search by name for Grants, Grantees, and Contacts or search by Request ID.
+		<div>
+			<p>   {{quickSearchData.description}}
 	    	</p>
 	    </div>
     </div>
@@ -16,7 +16,7 @@
     	<div class="text"><p class="staff-search">Or view grants by staff person.</p></div>
     	<select name="widget-staff-search" class="form-control" id="widget-staff-search">
     		<option value="">Select a Staff Person</option>
-    		<option ng-repeat="staff in staffList" value="{{staff.id}}">{{staff.name}}</option>
+    		<option ng-repeat="staff in quickSearchData.staffList" value="{{staff.id}}">{{staff.firstName}} {{staff.lastName}}</option>
     	</select>
     </div>
 </div>

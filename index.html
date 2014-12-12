@@ -14,10 +14,9 @@
     <script type="text/javascript" src="angular-sanitize.min.js"></script>
 
     <script type="text/javascript" src="jquery-1.11.0.js"></script>
-    <script type="text/javascript" src="app.js"></script>
 
+    <script type="text/javascript" src="app.js"></script>    
     <script type="text/javascript" src="controllers.js"></script>
-
     <script type="text/javascript" src="givingdata.js"></script>
     <script type="text/javascript" src="directives.js"></script>
 
@@ -283,7 +282,16 @@
 
         <div id="widgets" class="widgets">
             <div class="row">
-               <div ng-include="'templates/quicksearch.tpl.htm'"></div>
+               
+               <div id="widget-col1" class="col-md-4">
+                    <div ng-include="'templates/quicksearch.tpl.htm'"></div>
+
+               </div>
+               <div id="widget-col2" class="col-md-4">
+                    <div ng-include="'templates/yearatglance.tpl.htm'"></div>
+
+               </div>
+               <div id="widget-col3" class="col-md-4"></div>
             </div>
         </div>
     </div>
