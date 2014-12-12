@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="givingdata">
+<head><title>
+	GivingData > Home
+</title>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'>
+        <meta http-equiv="Expires" content="-1" />
+        <meta http-equiv="Cache-Control" content="no-cache" />
+        <meta http-equiv="Pragma" content="no-cache" />
+
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="angular-sanitize.min.js"></script>
+
+    <script type="text/javascript" src="jquery-1.11.0.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+
+    <script type="text/javascript" src="controllers.js"></script>
+
+    <script type="text/javascript" src="givingdata.js"></script>
+    <script type="text/javascript" src="directives.js"></script>
+
+    
+    <script type="text/javascript" language="javascript" src="http://redesign.givingdata.com/js/vendor/jquery-1.10.1.min.js"></script>
+
+
+
+    <script type="text/javascript" language="javascript" src="http://redesign.givingdata.com/js/vendor/bootstrap.min.js"></script>
+    <script type="text/javascript" language="javascript" src="http://redesign.givingdata.com/js/plugins/bootstrap-select.js"></script>
+    
+    <script type="text/javascript" language="javascript" src="http://redesign.givingdata.com/js/vendor/moment.min.js"></script>
+    <script type="text/javascript" language="javascript" src="http://redesign.givingdata.com/js/sitefunctions.js?v=3.0.3"></script>
+    <script type="text/javascript" language="javascript" src="http://redesign.givingdata.com/js/main.js?v=3.0.3"></script>
+    <script type="text/javascript" language="javascript" src="http://redesign.givingdata.com/js/plugins.js?v=3.0.3"></script>
+    <script type="text/javascript" language="javascript" src="http://redesign.givingdata.com/js/jqprint.js"></script>
+    <script type="text/javascript" language="javascript" src="http://redesign.givingdata.com/js/jquery.loadmask.js"></script>
+    
+    <script type="text/javascript" language="javascript">
+        var gdConfig = { siteRootUrl: 'http://redesign.givingdata.com', jsonApiUrl: 'http://redesign.givingdata.com/api/', 
+            serverDate: '12/6/2014 6:44:30 PM', dateFormat: 'YYYY MMM DD', mapName: 'dbrochu.hm5kdbcn' 
+        };
+        var userConfig = { rowsPerTable: 100, staffId: 63, isGiftsUser: false };
+        var dashboardId = '';
+    </script>
+
+    
+    <script type="text/javascript" language="javascript" src="http://redesign.givingdata.com/js/dataServices.js"></script>
+    <script type="text/javascript" language="javascript" src="widgets.js"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+
+
+    <link rel="stylesheet" type="text/css" media="all" href="http://redesign.givingdata.com/css/sass/main.css?v=3.0.3" />
+
+    <link rel="Stylesheet" type="text/css" media="screen" href="http://redesign.givingdata.com/css/plugins.css?v=3.0.3" />
+    <link rel="Stylesheet" type="text/css" media="screen" href="http://redesign.givingdata.com/css/main.css?v=3.0.3" />
+    <link rel="Stylesheet" type="text/css" media="all" href="http://redesign.givingdata.com/css/colors.ashx?v=3.0.3" />
+    <link rel="Stylesheet" type="text/css" class="print-change" media="print" href="http://redesign.givingdata.com/css/print-portrait.css?v=3.0.3" />
+    <link rel="Stylesheet" type="text/css" media="print" href="http://redesign.givingdata.com/css/print.css?v=3.0.3" />
+    <link rel="Stylesheet" type="text/css" media="all" href="http://redesign.givingdata.com/css/bootstrap-select.min.css?v=3.0.3" />
+    <link rel="stylesheet" href="http://redesign.givingdata.com/css/jquery.loadmask.css" />
+    <link rel="Shortcut Icon" href="/favicon.ico" />
+    
+</head>
+<body class="min970">
+    
+    
+    <form method="post" action="" id="aspnetForm">
+            
+    <div class="navbar navbar-fixed-top hidden-print">
+
+        <div id="utilnav" class="topLevel">
+            <div class="container">
+                <div class="navbar-header pull-left">
+                    <div class="navbar-brand">
+                        <img src="/img/custom/GITS/client-logo.png"/>
+                    </div>
+                </div>
+                <div class="navbar-header pull-right">
+                    <ul class="nav top-nav">
+                        <li id="ctl00_liHome">
+                            <a id="ctl00_hlHome" class="dropdown-toggle" href="/default.aspx">Home</a>
+                        </li>
+                        
+                            <li class="dropdown">
+                                <a id="ctl00_rptrAdmin_ctl00_hlAdmin" class="dropdown-toggle" href="/settings/default.aspx">Admin<p class="caret"></p></a>
+                                <ul class="dropdown-menu">
+                        
+                            <li id="ctl00_rptrAdmin_ctl01_liAdmin"><a href="/settings/configuration/default.aspx">Platform Configuration</a></li>
+                        
+                            <li id="ctl00_rptrAdmin_ctl02_liAdmin"><a href="/settings/attribs/default.aspx">Code/Attribute Management</a></li>
+                        
+                            <li id="ctl00_rptrAdmin_ctl03_liAdmin"><a href="/settings/years.aspx">Fiscal Years Management</a></li>
+                        
+                            <li id="ctl00_rptrAdmin_ctl04_liAdmin"><a href="/settings/users/default.aspx">User Management</a></li>
+                        
+                            <li id="ctl00_rptrAdmin_ctl05_liAdmin"><a href="/settings/users/roles.aspx">User Role Management</a></li>
+                        
+                            <li id="ctl00_rptrAdmin_ctl06_liAdmin"><a href="/settings/sitemap.aspx">Site Map & Permissions</a></li>
+                        
+                            <li id="ctl00_rptrAdmin_ctl07_liAdmin"><a href="/settings/cache.aspx">Cached Data</a></li>
+                        
+                            </ul>
+        	            </li>
+                        
+                        <li id="ctl00_liProfile" class="dropdown">
+                            <a href="/profile/default.aspx" class="dropdown-toggle">
+                                sysadmin
+                                <p class="caret"></p>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/profile/default.aspx?action=edit">Edit Profile</a></li>
+                                <li><a href="/profile/default.aspx?action=changepassword">Change Password</a></li>
+                            </ul>
+                        </li>
+                        <li id="ctl00_liLogout">
+                            <a id="ctl00_btnLogout" class="logout" href="javascript:__doPostBack(&#39;ctl00$btnLogout&#39;,&#39;&#39;)">Logout</a>
+                        </li>
+                        
+                        <li id="ctl00_liSearch">
+                            <div class="navbar-form">
+                                <div class="form-group">
+                                    <input id="quick-search" type="text" name="quick-search" placeholder="Search" class="form-control" />    
+                                </div>
+                            </div>      
+                        </li>
+                        <li class="dropdown dropdown-icon" id="recent-searches-dropdown">
+                            <a id="search-history" href="#" class="dropdown-toggle" data-toggle="dropdown" title="View Recent Searches"><span class="glyphicon glyphicon-time"></span></a>
+                             <ul class="dropdown-menu">
+                                 <li class="dropdown-header"><span>Recent Searches</span></li>
+                                 <li class="divider"></li>
+                                 <li id="recent-searches-progress"><span class="loading">loading...</span></li>
+                            </ul>
+                        </li>
+                       <li class="dropdown">
+                            <a href="#" class="print dropdown-toggle" title="Print this page"><span class="glyphicon glyphicon-print" ></span></a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-header"><span>Print</span></li>
+                                <li class="divider"></li>
+                                <li><a id="portrait-item" onclick="SwitchPrintStylesheet('portrait-item');" rel="/css/print-portrait.css?v=">Portrait (8 &frac12; X 11)</a></li>
+                                <li><a id="landscape-item" onclick="SwitchPrintStylesheet('landscape-item');" rel="/css/print-landscape.css?v=">Landscape (11 X 8 &frac12;)</a></li>
+                            </ul>
+                       </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottomLevel shadow">
+            <div class="container">
+              <div class="pull-left">
+                    
+                    
+                </div>
+                <div class="pull-right">
+                    
+                        <ul class="nav sub-nav">
+                    
+                        <li id="ctl00_rptrModNav_ctl01_liMod" class="dropdown">
+                            <a class="dropdown-toggle" href="/dashboard/">DASHBOARD</a>
+                            
+                                <ul class="dropdown-menu">
+                            
+                                <li id="ctl00_rptrModNav_ctl01_rptrFeatures_ctl01_liFeat" class="dropdown-header first"><a href="/dashboard/cashflow/">Payments Dashboard</a></li>
+                                
+                                    <li id="ctl00_rptrModNav_ctl01_rptrFeatures_ctl01_rptrViews_ctl01_liView" class=" "><a href="/dashboard/cashflow/quarterly/default.aspx">Quarterly View</a></li>
+                                    
+                                    <li id="ctl00_rptrModNav_ctl01_rptrFeatures_ctl01_rptrViews_ctl02_liView" class=" "><a href="/dashboard/cashflow/monthly/default.aspx">Monthly View</a></li>
+                                    
+                                    <li id="ctl00_rptrModNav_ctl01_rptrFeatures_ctl01_rptrViews_ctl03_liView" class=" "><a href="/dashboard/cashflow/weekly/default.aspx">Weekly View</a></li>
+                                    
+                                    <li id="ctl00_rptrModNav_ctl01_rptrFeatures_ctl01_rptrViews_ctl04_liView" class=" "><a href="/dashboard/cashflow/budget/default.aspx">Budget Manager</a></li>
+                                    
+                                    <li id="ctl00_rptrModNav_ctl01_rptrFeatures_ctl01_rptrViews_ctl05_liView" class=" "><a href="/dashboard/cashflow/nongifts/default.aspx">Program Expenses</a></li>
+                                    
+                            <li class="nav-separator"></li>
+                                <li id="ctl00_rptrModNav_ctl01_rptrFeatures_ctl03_liFeat" class="dropdown-header "><a href="/dashboard/grantmaking/">Approvals Dashboard</a></li>
+                                
+                                    <li id="ctl00_rptrModNav_ctl01_rptrFeatures_ctl03_rptrViews_ctl00_liView" class=" "><a href="/dashboard/grantmaking/quarterly/default.aspx">Quarterly View</a></li>
+                                    
+                                    <li id="ctl00_rptrModNav_ctl01_rptrFeatures_ctl03_rptrViews_ctl01_liView" class=" "><a href="/dashboard/grantmaking/monthly/default.aspx">Monthly View</a></li>
+                                    
+                                    <li id="ctl00_rptrModNav_ctl01_rptrFeatures_ctl03_rptrViews_ctl02_liView" class=" "><a href="/dashboard/grantmaking/weekly/default.aspx">Weekly View</a></li>
+                                    
+                                    <li id="ctl00_rptrModNav_ctl01_rptrFeatures_ctl03_rptrViews_ctl04_liView" class=" "><a href="/dashboard/grantmaking/budget/default.aspx">Budget Manager</a></li>
+                                    
+                            <li class="nav-separator"></li>
+                                <li id="ctl00_rptrModNav_ctl01_rptrFeatures_ctl05_liFeat" class="dropdown-header "><a href="/custom/gits/prepipeline/">Pre-Pipeline</a></li>
+                                
+                                    <li id="ctl00_rptrModNav_ctl01_rptrFeatures_ctl05_rptrViews_ctl01_liView" class=" "><a href="/custom/gits/prepipeline/form.aspx">Add New</a></li>
+                                    
+                            
+                                </ul>
+                            
+                        </li>
+                    
+                        <li id="ctl00_rptrModNav_ctl02_liMod" class="dropdown">
+                            <a class="dropdown-toggle" href="/visualizer/">VISUALIZER</a>
+                            
+                                <ul class="dropdown-menu">
+                            
+                                <li id="ctl00_rptrModNav_ctl02_rptrFeatures_ctl01_liFeat" class="dropdown-header first"><a href="/visualizer/allocations/">Allocations</a></li>
+                                
+                                    <li id="ctl00_rptrModNav_ctl02_rptrFeatures_ctl01_rptrViews_ctl00_liView" class=" "><a href="/visualizer/allocations/stack/default.aspx">Stack</a></li>
+                                    
+                                    <li id="ctl00_rptrModNav_ctl02_rptrFeatures_ctl01_rptrViews_ctl01_liView" class=" "><a href="/visualizer/allocations/bar/default.aspx">Bar</a></li>
+                                    
+                                    <li id="ctl00_rptrModNav_ctl02_rptrFeatures_ctl01_rptrViews_ctl02_liView" class=" "><a href="/visualizer/allocations/pie/default.aspx">Pie</a></li>
+                                    
+                            <li class="nav-separator"></li>
+                                <li id="ctl00_rptrModNav_ctl02_rptrFeatures_ctl03_liFeat" class="dropdown-header "><a href="/visualizer/trends/">Trends</a></li>
+                                
+                                    <li id="ctl00_rptrModNav_ctl02_rptrFeatures_ctl03_rptrViews_ctl00_liView" class=" "><a href="/visualizer/trends/bar/default.aspx">Bar</a></li>
+                                    
+                                    <li id="ctl00_rptrModNav_ctl02_rptrFeatures_ctl03_rptrViews_ctl01_liView" class=" "><a href="/visualizer/trends/area/default.aspx">Area</a></li>
+                                    
+                                    <li id="ctl00_rptrModNav_ctl02_rptrFeatures_ctl03_rptrViews_ctl02_liView" class=" "><a href="/visualizer/trends/pie/default.aspx">Pie</a></li>
+                                    
+                            <li class="nav-separator"></li>
+                                <li id="ctl00_rptrModNav_ctl02_rptrFeatures_ctl05_liFeat" class="dropdown-header "><a href="/visualizer/hierarchies/">Hierarchies</a></li>
+                                
+                                    <li id="ctl00_rptrModNav_ctl02_rptrFeatures_ctl05_rptrViews_ctl00_liView" class=" "><a href="/visualizer/hierarchies/quilt/default.aspx">Quilt</a></li>
+                                    
+                                    <li id="ctl00_rptrModNav_ctl02_rptrFeatures_ctl05_rptrViews_ctl01_liView" class=" "><a href="/visualizer/hierarchies/tree/default.aspx">Tree</a></li>
+                                    
+                            <li class="nav-separator"></li>
+                                <li id="ctl00_rptrModNav_ctl02_rptrFeatures_ctl07_liFeat" class="dropdown-header "><a href="/visualizer/maps/">Maps</a></li>
+                                
+                                    <li id="ctl00_rptrModNav_ctl02_rptrFeatures_ctl07_rptrViews_ctl00_liView" class=" "><a href="/visualizer/maps/cluster/default.aspx">Cluster Map</a></li>
+                                    
+                                    <li id="ctl00_rptrModNav_ctl02_rptrFeatures_ctl07_rptrViews_ctl01_liView" class=" "><a href="/visualizer/maps/geo/default.aspx">Region Map (beta)</a></li>
+                                    
+                            
+                                </ul>
+                            
+                        </li>
+                    
+                        <li id="ctl00_rptrModNav_ctl03_liMod" class="dropdown">
+                            <a class="dropdown-toggle" href="/portfolio/">REPORTS</a>
+                            
+                                <ul class="dropdown-menu">
+                            
+                                <li id="ctl00_rptrModNav_ctl03_rptrFeatures_ctl01_liFeat" class="dropdown-header first"><a href="/dashboard/grantmaking/staffdisposition.aspx">Staff Portfolio</a></li>
+                                
+                            <li class="nav-separator"></li>
+                                <li id="ctl00_rptrModNav_ctl03_rptrFeatures_ctl03_liFeat" class="dropdown-header "><a href="/portfolio/pending/">Pending Summary</a></li>
+                                
+                            <li class="nav-separator"></li>
+                                <li id="ctl00_rptrModNav_ctl03_rptrFeatures_ctl05_liFeat" class="dropdown-header "><a href="/portfolio/approvals/">Approval Summary</a></li>
+                                
+                            <li class="nav-separator"></li>
+                                <li id="ctl00_rptrModNav_ctl03_rptrFeatures_ctl07_liFeat" class="dropdown-header "><a href="/portfolio/yeartoyear/">Year-to-Year Summary</a></li>
+                                
+                            <li class="nav-separator"></li>
+                                <li id="ctl00_rptrModNav_ctl03_rptrFeatures_ctl09_liFeat" class="dropdown-header "><a href="/portfolio/supporttrend/">Multi-Year Support Trend</a></li>
+                                
+                            <li class="nav-separator"></li>
+                                <li id="ctl00_rptrModNav_ctl03_rptrFeatures_ctl11_liFeat" class="dropdown-header "><a href="/portfolio/pendingnopayments/">Pending Grants Without Payments</a></li>
+                                
+                            
+                                </ul>
+                            
+                        </li>
+                    
+                        </ul>
+                      
+                </div>
+            </div>
+        </div>
+            
+    </div>
+            
+    <div class="container" id="wrap">
+        
+
+    <div id="landingPageWidgets" ng-controller="givingDataController">
+
+         <div class="criteria border-radius no-hover">
+            <div class="primary">Home</div>
+        </div>
+
+        <div id="widgets" class="widgets">
+            <div class="row">
+               <div ng-include="'templates/quicksearch.tpl.htm'"></div>
+            </div>
+        </div>
+    </div>
+    
+    </div>                 
+    
+    <script type="text/javascript">
+        $(function(){
+           // loadWidgets("#widgets", 2);
+        });
+    </script>
+
+        
+    
+    <footer>
+        <div class="container">
+            <div class="left hide-print"></div>
+            <div class="right ">
+                <li class="support"><a href="http://support.givingdata.com/hc/en-us/requests/new/" target="_blank">Submit a Support Request<span class="glyphicon glyphicon-upload"></span></a></li>
+                <li><a href="http://www.givingdata.com" target="_blank"><div class="logo"></div></a></li>
+                <li class="copyright">
+                    <div>&copy;2014 GivingData, LLC</div>
+                    <div>v3.0.3</div>
+                </li>
+            </div>
+        </div>
+    </footer>
+    
+
+    </form>    
+</body>
+</html>
